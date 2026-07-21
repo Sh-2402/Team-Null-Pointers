@@ -74,3 +74,27 @@ GROUP BY
     s.locality
 ORDER BY 
 	worst_on_time_rank;
+    
+    
+    
+-- Query 3: Hourly complience trend (CTE)
+
+WITH hourly_stats AS (
+	SELECT 
+		HOUR(order_time) AS order_hour,
+        COUNT(*) AS total_orders,
+        SUM(CASE
+				WHEN delivered_time_dt IS NOT NULL
+					AND delivered_time_dt <= promised_time
+				THEN 1 ELSE 0
+			END) AS on_time_orders
+	FROM orders
+    GROUP BY order_hour
+)
+SELECT
+	order_hour,
+    total_orders,
+    on_time_orders,
+    ROUND(100.0 * on_time_orders / total_orders, 1) AS on_time_pct 
+FROM hourly_stats
+ORDER BY order_hour;
