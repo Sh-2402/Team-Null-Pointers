@@ -1,3 +1,11 @@
+CREATE DATABASE blinkit;
+USE blinkit;
+ALTER TABLE orders
+ADD COLUMN delivered_time_dt DATETIME;
+
+UPDATE orders
+SET delivered_time_dt = STR_TO_DATE(NULLIF(delivered_time, ''), '%Y-%m-%d %H:%i:%s');
+
 SELECT 
 	s.city,
     HOUR(o.order_time) AS order_hour,
