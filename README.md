@@ -101,3 +101,4 @@ After scrubbing the data, we engineered target feature sets across four core dim
 ├── README.md              # Project documentation
 └── requirements.txt       # Python dependencies
 ```
+NOTE: This repository is for the project I was tasked to complete in my 1-month Himshikhar program at IIT Mandi for AI & Data Analysis
