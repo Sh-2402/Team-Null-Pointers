@@ -1,4 +1,6 @@
 import mysql.connector
+import matplotlib.pyplot as plt
+import pandas as pd
 
 conn = mysql.connector.connect(
     host="127.0.0.1",
@@ -7,6 +9,9 @@ conn = mysql.connector.connect(
     database="blinkit"
 )
 
-print("Connected to the database successfully!" if conn.is_connected() else "Failed to connect to the database.")
 
 conn.close()
+
+df = pd.read_csv("data/orders.csv")
+
+print(f"Raw orders loaded: {len(df)} rows")
