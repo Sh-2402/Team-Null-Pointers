@@ -1,5 +1,11 @@
 # 📊 Blinkit Quick-Commerce SLA Diagnostic Report
 
+### 📊 Live Interactive Diagnostic Dashboard
+> **Explore the interactive dashboard on Tableau Public by clicking the link or image below:**  
+> 🔗 **[View Live Tableau Dashboard](https://public.tableau.com/views/Blinkit-SLA-Diagnostic-Dashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+[![Blinkit Dashboard Preview](dashboard_preview.png)](https://public.tableau.com/views/Blinkit-SLA-Diagnostic-Dashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 **Project Scope:** Operations Analysis for Mumbai & Bengaluru (1-Month Order Data)  
 **Target Stakeholder:** Operations Director  
 **Primary Objective:** Identify drivers of 10-minute Service Level Agreement (SLA) breaches, isolate operational bottlenecks, and formulate targeted capacity interventions.
